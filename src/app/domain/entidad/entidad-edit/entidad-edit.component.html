@@ -1,0 +1,53 @@
+<app-header  [isEdicion]="true" [titulo]="titulo" [ruta]="ruta"></app-header>
+
+<div class="p-fluid p-grid">
+    <div class="p-col-12 p-md-6">
+        <div class="card">
+            <div class="p-fluid">
+                <div class="p-field">
+                    <span class="p-float-label">
+                        <p-inputNumber id="lblcodigo" [(ngModel)]="entidad.codigo_dolphin"> </p-inputNumber>
+                        <label for="lblcodigo">Codigo Dolphin</label>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="p-field">
+                <span class="p-float-label">
+                    <input type="text" id="lblNombre" pInputText [(ngModel)]="entidad.nombre"> 
+                    <label for="lblNombre">Nombre</label>
+                </span>
+            </div>
+
+            <div class="p-field">
+                <span class="p-float-label">
+                    <input type="text" id="lblwtspp" title="Ejemplo +595981234567" pInputText [(ngModel)]="entidad.telefono"> 
+                    <label for="lblwtspp">Whatsapp</label>
+                </span>
+            </div>
+
+            <div class="p-field">
+                <span class="p-field">
+                    <label for="chxPadron">Padron?</label>
+                    <br>
+                    <p-checkbox id="chxPadron" binary="{{entidad.padron}}" [(ngModel)]="entidad.padron"></p-checkbox>
+                </span>
+            </div>
+            
+            <div class="p-field">
+                <span class="p-field">
+                    <label for="drpEmpresa">Empresa</label>
+                    <p-dropdown inputId="drpEmpresa" [autoDisplayFirst]="false" [options]="empresas" [(ngModel)]="entidad.empresa"
+                              optionLabel="nombre" [showClear]="true" placeholder="Seleccione la empresa" filter="true" ></p-dropdown>
+                   
+                </span>
+            </div>
+
+            <div class="p-field">
+                <button pButton pRipple type="button" (click)="isModoEdicion ? updateEntidad() : addEntidad()" styleClass="p-button-success p-mr-2 p-mb-2"  label="Guardar" ></button>
+            </div>
+
+        </div>
+    </div>
+</div>
+

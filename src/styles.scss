@@ -1,1 +1,830 @@
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeflex/primeflex.scss";
+@import "../node_modules/primeicons/primeicons.css";
+@import "../node_modules/prismjs/themes/prism-coy.css";
+
+
+
 /* You can add global styles to this file, and also import other style files */
+.ui-panel .ui-panel-titlebar-icon {
+    float: left;
+    margin-right: 10px !important;
+}
+
+
+input {
+    text-transform: uppercase;
+}
+
+input[type='number'] {
+    text-align: right;
+}
+
+.mouse-pointer {
+    cursor: pointer;
+}
+
+div.ui-message {
+    margin-top: .3em !important;
+}
+
+span.ui-message-text {
+    padding-left: .2em !important;
+}
+
+/*Titulo Principal*/
+
+.ui-titulo-pagina {
+    font-size: 32px;
+    color: white;
+    position: absolute;
+    left: 307px;
+    top: 30px;
+    font-weight: 200 !important;
+}
+
+@media screen and (max-width: 40em) {
+    .ui-titulo-pagina {
+        display: none;
+    }
+
+    .ui-input-buscar {
+        width: 100% !important;
+    }
+}
+
+.dropdown-label {
+    top: -20px;
+    font-size: 12px;
+    color: #3F51B5;
+    margin: 1px;
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px
+}
+
+.npw-panel-colapsivel .ui-panel-titlebar-icon span {
+    color: #212121;
+}
+
+.npw-panel-colapsivel .ui-panel-content {
+    padding-top: 10px;
+}
+
+.npw-panel-colapsivel .ui-panel-titlebar {
+    background-color: transparent !important;
+    border: none !important;
+    color: #212121;
+    font-size: 1.5em;
+    padding-left: 14px;
+    font-weight: bold;
+}
+
+/*columna registros*/
+
+@media screen and (max-width: 40em) {
+    .ui-table-responsive .ui-column-title {
+        max-width: 30%;
+    }
+}
+
+@media (max-width: 640px) {
+    .panelColapsivel {
+        background-color: transparent;
+        border: none;
+    }
+
+    .ui-input-buscar {
+        width: 100% !important;
+    }
+
+    .ui-toolbar {
+        padding: 0px !important;
+    }
+
+    .ui-table .ui-table-caption {
+        display: block !important;
+    }
+
+    .ui-toolbar-group-right {
+        margin-right: 8% !important
+    }
+
+    .ui-button.ui-button-text-icon-left {
+        top: -7px !important;
+        left: 17px !important
+    }
+
+    .ui-toolbar-group-left {
+        margin-top: 1em
+    }
+}
+
+.iu-campo-titulo {
+    font-size: 14px;
+    color: #3F51B5;
+}
+
+.ui-campo-lista {
+    text-transform: uppercase;
+}
+
+/*area de descripcion*/
+
+.ui-inputTextarea {
+    font-family: arial;
+}
+
+.ui-label-obligatorio {
+    color: #a94442;
+    font-size: 12px;
+}
+
+.npw-label {
+    top: -20px;
+    font-size: 12px;
+    color: #3F51B5;
+    margin: 1px;
+}
+
+/*situacion de registros*/
+
+.ui-situacao-cadastro {
+    margin-top: -30px;
+    float: right;
+    background-color: #bdbdbd54;
+    width: 97px;
+    margin-left: 94%;
+    padding: 0.5em !important;
+}
+
+.ui-input-situacao {
+    border-bottom: none !important;
+    text-align: center !important;
+}
+
+.ui-input-buscar {
+    width: auto;
+    color: white;
+    background-image: linear-gradient(to bottom, #3F51B5, #3F51B5), linear-gradient(to bottom, #ffffff, #ffffff);
+}
+
+//botones del reporte de producción
+@media all and (min-width: 1281px) and (max-width: 1840px) {
+    .ui-situacao-cadastro {
+        margin-left: 92% !important;
+    }
+
+    .ui-btn-inativar span.ui-button-text,
+    .ui-btn-novoReporte span.ui-button-text,
+    .ui-btn-guardar span.ui-button-text,
+    .ui-btn-imprimir span.ui-button-text {
+        padding-left: 0px !important;
+    }
+
+    .ui-btn-novoReporte {
+        margin-right: 0px !important;
+    }
+}
+
+@media all and (min-width: 1280px) and (max-width: 1332px) {
+
+    .ui-btn-inativar span.ui-button-text,
+    .ui-btn-novoReporte span.ui-button-text,
+    .ui-btn-guardar span.ui-button-text,
+    .ui-btn-imprimir span.ui-button-text {
+        padding-left: 0px !important;
+        margin-right: 0px !important;
+    }
+}
+
+@media all and (min-width: 1080px) and (max-width: 1279px) {
+    .ui-btn-inativar span.ui-icon-cancel {
+        margin-left: -6px !important;
+    }
+
+    .ui-situacao-cadastro {
+        margin-left: 89% !important;
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1079px) {
+    .ui-situacao-cadastro {
+        margin-left: 89% !important;
+    }
+
+
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+    .ui-situacao-cadastro {
+        margin-left: 86%;
+    }
+
+}
+
+@media all and (min-width: 481px) and (max-width: 767px) {
+    .ui-situacao-cadastro {
+        margin-left: 83%;
+    }
+
+    .ui-splitbutton>.ui-button:last-child {
+        margin-left: 17px !important;
+        margin-top: -7px !important;
+
+    }
+
+    .ui-splitbutton .ui-button.ui-splitbutton-menubutton {
+        margin-left: 17px !important;
+        margin-top: -7px !important;
+    }
+
+}
+
+@media all and (max-width: 480px) {
+    .ui-situacao-cadastro {
+        margin-left: 80%;
+    }
+
+    .ui-button-personalizado {
+        width: 12%;
+        margin-top: 7px;
+        float: right;
+    }
+
+    .ui-button-personalizado.ui-button .ui-button-icon-left {
+        margin-left: 4px;
+    }
+
+    .ui-button-personalizado.ui-button .ui-button-text {
+        display: none;
+    }
+
+    .ui-splitbutton>.ui-button:last-child {
+        margin-left: 17px !important;
+        margin-top: -7px !important;
+
+    }
+
+    .ui-splitbutton .ui-button.ui-splitbutton-menubutton {
+        margin-left: 17px !important;
+        margin-top: -7px !important;
+    }
+
+}
+
+@media only screen and (max-width: 40em) {
+    .ui-situacao-cadastro {
+        display: none;
+    }
+}
+
+/*tabela prioridade*/
+@media only all {
+
+    th.ui-p-6,
+    td.ui-p-6,
+    th.ui-p-5,
+    td.ui-p-5,
+    th.ui-p-4,
+    td.ui-p-4,
+    th.ui-p-3,
+    td.ui-p-3,
+    th.ui-p-2,
+    td.ui-p-2,
+    th.ui-p-1,
+    td.ui-p-1 {
+        display: none;
+    }
+}
+
+/* Show priority 1 at 320px (20em x 16px) */
+@media screen and (min-width: 20em) {
+
+    th.ui-p-1,
+    td.ui-p-1 {
+        display: table-cell;
+    }
+}
+
+/* Show priority 2 at 480px (30em x 16px) */
+@media screen and (min-width: 30em) {
+
+    th.ui-p-2,
+    td.ui-p-2 {
+        display: table-cell;
+    }
+}
+
+/* Show priority 3 at 640px (40em x 16px) */
+@media screen and (min-width: 40em) {
+
+    th.ui-p-3,
+    td.ui-p-3 {
+        display: table-cell;
+    }
+}
+
+/* Show priority 4 at 800px (50em x 16px) */
+@media screen and (min-width: 50em) {
+
+    th.ui-p-4,
+    td.ui-p-4 {
+        display: table-cell;
+    }
+}
+
+/* Show priority 5 at 960px (60em x 16px) */
+@media screen and (min-width: 60em) {
+
+    th.ui-p-5,
+    td.ui-p-5 {
+        display: table-cell;
+    }
+}
+
+/* Show priority 6 at 1,120px (70em x 16px) */
+@media screen and (min-width: 70em) {
+
+    th.ui-p-6,
+    td.ui-p-6 {
+        display: table-cell;
+    }
+}
+
+.ui-div-buscar {
+    text-align: left;
+    display: flex;
+}
+
+.ui-input-buscar {
+    color: #383838 !important;
+    width: auto;
+}
+
+.ui-search .ui-table-caption:not(.ui-paginator-bottom) {
+    background-color: #ffffff !important;
+    border: 1px solid #e8e8e8 !important;
+    color: #383838 !important;
+    padding: 10px !important;
+    margin-bottom: 5px;
+}
+
+.ui-search-icon {
+    margin: 4px 4px 0 0;
+}
+
+.ui-icon-button {
+    border-radius: 0px !important;
+    background: none !important;
+    box-shadow: none !important;
+    color: #212121 !important;
+}
+
+.ui-div-lista {
+    margin-top: 15px;
+}
+
+.ui-email {
+    text-transform: lowercase;
+}
+
+.input::placeholder {
+    color: #e6e6e6;
+}
+
+.avatar {
+    /* cambia estos dos valores para definir el tamaño de tu círculo */
+    height: 150px;
+    width: 150px !important;
+    /* los siguientes valores son independientes del tamaño del círculo */
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
+
+.avatar-menu {
+    /* cambia estos dos valores para definir el tamaño de tu círculo */
+    height: 60px;
+    width: 60px !important;
+    /* los siguientes valores son independientes del tamaño del círculo */
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+}
+
+.avatar-menuSlim {
+    height: 50px;
+    width: 50px !important;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+    margin-left: 2px;
+    margin-top: -11px;
+}
+
+.avatar-menu-horizontal {
+    height: 50px;
+    width: 50px !important;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    background-size: 100% auto;
+    margin-top: -6px;
+    margin-right: 34px;
+}
+
+//div perfil usuario caso menu slim
+.ui-div-slim {
+    height: 36px;
+}
+
+/*body{
+    background-image: url('https://www.novasaludsa.cl/wp-content/uploads/2017/10/Abstract-Background-White.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100% !important;
+    position: absolute;
+    display: block;
+}*/
+
+body .ui-calendar.ui-calendar-w-btn .ui-inputtext {
+    width: calc(100% - 2em) !important;
+}
+
+body .ui-paginator .ui-paginator-first,
+body .ui-paginator .ui-paginator-last,
+body .ui-paginator .ui-paginator-prev,
+body .ui-paginator .ui-paginator-next {
+    color: black;
+    opacity: 0.7;
+    font-weight: bold;
+}
+
+body .ui-paginator {
+    background-color: #e8e8e8;
+    color: black;
+    padding: 0.625em 1em;
+}
+
+body .ui-widget-header {
+
+    color: #ffffff;
+    font-size: 1em;
+    border: 1px solid #cacaca;
+}
+
+body .ui-paginator .ui-paginator-pages a {
+    color: #797979 // html, body {
+    //      height: 100%;
+    //     }
+    // body {
+    //      margin: 0;
+    //       font-family: Roboto, "Helvetica Neue", sans-serif;
+    //     }
+    // ;
+}
+
+textarea {
+    width: 100% !important;
+    resize: none;
+    text-transform: none;
+}
+
+
+#calendario>span>input {
+    text-align: right !important;
+}
+
+// .layout-container .ultima-menu.ultima-main-menu {
+//     margin-top: 9px;
+//     padding-bottom: 120px;
+// }
+
+.layout-container .ultima-menu.ultima-main-menu {
+    margin-top: 0px !important;
+}
+
+#chips>div>ul>li {
+    text-transform: uppercase !important;
+}
+
+#calendarioMovimentoSaldo>span>input {
+    text-transform: lowercase !important;
+}
+
+//clases de acuerdo al menuLayout
+.ui-flutuante div {
+    position: sticky !important;
+    top: 91px !important;
+    z-index: 3;
+}
+
+.ui-flutuante-menuLayout-horizontal div {
+    top: 133px !important;
+    z-index: 1;
+    position: sticky !important;
+}
+
+
+body .ui-widget:disabled,
+body .ui-state-disabled {
+    opacity: .8;
+    filter: Alpha(Opacity=35);
+    font-weight: 300;
+}
+
+body .ui-inputtext:disabled {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.td1,
+.td2,
+.td3,
+.td4,
+.td5,
+.td6,
+.td7,
+.td8 {
+    padding: 0.15em 1em !important;
+}
+
+.ui-no-fieldset {
+    background-color: #e8e8e8;
+    border: 1px solid #cacaca;
+    border-bottom: 0px;
+}
+
+.ui-no-fieldset h4 {
+    margin-top: 8px;
+    margin-bottom: 0px;
+    margin-left: 3px
+}
+
+.ui-toast-message-warn {
+    background-color: #e0a800 !important;
+}
+
+#reporteToast .ui-toast .ui-toast-close-icon {
+    display: none !important;
+}
+
+/*NECESSIDADE DE MATERIAIS*/
+body .ui-treetable .ui-treetable-tbody>tr>td .ui-treetable-toggler {
+    top: 0px;
+}
+
+body .ui-treetable-scrollable-header.ui-widget-header {
+    background-color: #ffffff;
+}
+
+/*NECESSIDADE DE MATERIAIS*/
+
+.ui-no-pad-lr {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.tree-rastreo {
+    width: 100%;
+}
+
+.tree-rastreo .ui-widget-content {
+    border: none !important;
+}
+
+.tree-rastreo .ui-treenode-label {
+    width: 95%;
+}
+
+.tree-rastreo .ui-treenode-movimento,
+.tree-rastreo .ui-treenode-reporte {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.active-menuitem-menuSlim {
+    width: 75px;
+}
+
+.fav {
+    background-color: #efefef78;
+    margin-bottom: 1px;
+    border-left: solid 2px #e91e63;
+}
+
+ul ul .fav {
+    background-color: inherit;
+    border: inherit;
+}
+
+ul ul .fav a span {
+    display: inline-table !important;
+}
+
+.aaa {
+    background-color: #ffff;
+
+}
+
+//menu favorito horizontal
+
+
+//fin menu favorito horizontal
+
+//panel principal menu
+@media (min-width: 1025px) {
+    .ui-scrollPanel-menu-horizontal .ui-scrollpanel-wrapper {
+        height: 35px !important;
+    }
+
+    .fav-horizontal {
+        background-color: #f4f0f00a;
+        margin-bottom: 1px;
+        border-right: solid 2px #bdbdbd;
+        border-left: none;
+        height: 35px;
+    }
+
+    .fav-horizontal a {
+        height: 35px;
+    }
+
+    .fav-horizontal a span {
+        display: none !important;
+    }
+
+    ul ul .fav-horizontal a span {
+        display: contents !important;
+    }
+
+    ul ul .fav-horizontal {
+        background-color: inherit;
+        border: inherit;
+    }
+
+}
+
+.ui-isFavorito {
+    font-size: 19px !important;
+}
+
+.ui-naoFavorito {
+    font-size: 30px !important;
+}
+
+.spanCorrelacao {
+    position: absolute;
+    font-size: x-small;
+    padding-top: 20px;
+}
+
+.spanCorrelacao span,
+i {
+    cursor: pointer;
+}
+
+.ui-favorito {
+    font-size: 23px !important;
+}
+
+.ui-versao {
+    width: 100%;
+    background-color: #e91e63;
+    height: auto;
+    margin-top: -29px;
+    font-size: smaller;
+    text-align: center;
+    margin-bottom: 6px;
+    color: #F2EFF0;
+}
+
+.ui-versao-menuSlim {
+    width: 75px;
+    background-color: #e91e63;
+    height: auto;
+    margin-top: -15px;
+    font-size: smaller;
+    text-align: center;
+    margin-bottom: 6px;
+    color: #F2EFF0;
+}
+
+
+// inicio alterecoes para modelo de analise edit -- possivel separacao em componente
+body .ui-fieldset .ui-fieldset-legend .ui-fieldset-toggler {
+    font-size: 1.0em;
+}
+
+.header-collapsable {
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #212121;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+body .ui-fieldset-toggleable {
+    border: none;
+    padding-top: 0px;
+    padding-left: 0px;
+}
+
+body fieldset legend a {
+    padding-left: 0px !important;
+}
+
+// fim alterecoes para modelo de analise edit -- possivel separacao em componente
+
+//NPW-325
+.ui-dropdown-label {
+    text-overflow: ellipsis;
+}
+
+
+
+.ui-panelmenu .ui-panelmenu-header {
+    background-color: #ffffff !important;
+}
+
+.ui-menuitem-text {
+    color: #212121 !important;
+}
+
+//perfil-usuario menu slim
+.ui-scrollpanel-content {
+    height: calc(100% + 36px);
+    width: calc(100% + 36px);
+    padding: 0 18px 18px 0;
+    /* position: relative; */
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.ui-card-busca-avanzada .ui-widget-content {
+    margin-top: 14px;
+}
+
+
+
+.btn-inactivar-roteiro span.ui-button-icon-left.ui-clickable.ui-icon-delete {
+    margin-left: -6px;
+}
+
+
+.report-block-summary .dx-texteditor-input {
+    font-weight: bold !important;
+    text-align: right;
+}
+
+.number-box-direita .dx-texteditor-input {
+    text-align: right;
+}
+
+.number-box-direita-bold .dx-texteditor-input {
+    text-align: right;
+    font-weight: bold !important;
+}
+
+.i-integracao {
+    font-size: x-small;
+    color: red;
+}
+
+.i-integracao::before {
+    content: " *Dato cargado de la integración";
+}
+
+formly-form input{    
+    text-transform: none !important;
+}
+
+formly-form .form-group {
+    margin-bottom: 20px;
+}
+
+.fundo{
+    background-color: red($color: #000000);
+}
+
+formly-form label {    
+    top: -20px;
+    font-size: 12px;
+    color: #3F51B5;
+    margin: 1px;
+}
+
+p-radiobutton label {
+    font-size: initial;
+    color: black !important;
+}
+
+div.btn-group button{
+    margin-left: 5px;
+}

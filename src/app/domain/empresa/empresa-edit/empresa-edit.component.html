@@ -1,0 +1,35 @@
+<app-header  [isEdicion]="true" [titulo]="titulo" [ruta]="ruta"></app-header>
+
+<div class="p-fluid p-grid">
+    <div class="p-col-12 p-md-6">
+        <div class="card">
+            <div class="p-fluid">
+                <div class="p-field">
+                    <span class="p-float-label">
+                        <p-inputNumber id="lblcodigo" [(ngModel)]="empresa.codigo"> </p-inputNumber>
+                        <label for="lblcodigo">Codigo</label>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="p-field">
+                <span class="p-float-label">
+                    <input type="text" id="lblNombre" pInputText [(ngModel)]="empresa.nombre"> 
+                    <label for="lblNombre">Nombre</label>
+                </span>
+            </div>
+
+
+
+            <div class="p-field-checkbox">
+                <p-checkbox id="chxPadron" binary="{{empresa.habilitado}}" [(ngModel)]="empresa.habilitado"></p-checkbox>
+                <label for="chxPadron">Habilitado?</label>
+            </div>
+
+            <div class="p-field">
+                <button pButton pRipple type="button" (click)="isModoEdicion ? updateEmpresa() : addEmpresa()" styleClass="p-button-success p-mr-2 p-mb-2"  label="Guardar" ></button>
+            </div>
+
+        </div>
+    </div>
+</div>

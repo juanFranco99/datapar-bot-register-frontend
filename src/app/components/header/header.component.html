@@ -1,0 +1,13 @@
+<div class="p-grid">
+    <div class="p-col-12 p-md-12">
+        <div class="card">
+            <div class="ui-toolbar-group-right">
+                <h4>{{titulo}}</h4>
+                <button *ngIf="isEdicion" pButton pRipple type="button" icon="pi pi-arrow-left" class="ui-button-success" style="margin-right: 1em" (click)="volver()" label="Volver" ></button>
+                <button pButton pRipple type="button" icon="pi pi-plus" class="ui-button-success" style="margin-right: 1em" (click)="nuevo()" label="Nuevo" ></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
