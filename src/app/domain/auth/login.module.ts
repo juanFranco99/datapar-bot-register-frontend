@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from 'src/app/service/auth.service';
 import { MessageService } from 'primeng/api';
 import {ToastModule} from 'primeng/toast';
+import {PasswordModule} from 'primeng/password';
 
 
 
@@ -21,7 +22,8 @@ import {ToastModule} from 'primeng/toast';
     LoginRoutingModule,
     ButtonModule,
     HttpClientModule,
-    ToastModule
+    ToastModule,
+    PasswordModule
   ],
   providers: [
     AuthService,

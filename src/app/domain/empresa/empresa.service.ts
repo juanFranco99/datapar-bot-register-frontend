@@ -7,7 +7,7 @@ import { Empresa } from './empresa.model';
 })
 export class EmpresaService {
 
-  api = "https://dolphinbot-services.datapar.com.py/empresa/";
+  api = "http:/localhost:3000/bot/empresa/";
 
   constructor(
     private httpClient: HttpClient

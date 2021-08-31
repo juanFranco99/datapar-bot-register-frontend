@@ -9,7 +9,7 @@ import { User } from '../domain/auth/user.model';
 })
 export class AuthService {
 
-  api = "https://dolphinbot-services.datapar.com.py/login/";
+  api = "http:/localhost:3000/bot/empresa/";
 
   constructor(
     private httpClient: HttpClient,
